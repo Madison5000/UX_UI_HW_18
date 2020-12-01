@@ -123,11 +123,13 @@ h3 {
 .workGrid {
     display: grid;
     min-height: 300px;
-    margin: 0 auto;
-    width: 60%;
+    object-fit: contain;
+    object-position: center;
+    margin: 4vh auto;
+    width: 40%;
     font-family: Inconsolata;
-    grid-template-rows: 300px 300px;
-    grid-template-columns: 25% 100%;
+    grid-template-rows: 400px 400px;
+    grid-template-columns: 300px 1fr;
     grid-template-areas: 
     "workImage1 workInfo1"
     "workImage2 workInfo2"
@@ -138,20 +140,30 @@ h3 {
     grid-area: workImage1;
 }
 
+#workImage1 img {
+    width: 300px;
+    padding-bottom: 20px;
+    margin-bottom: 2vh;
+}
+
 #workInfo1 {
     grid-area: workInfo1;
     padding-left: 2vw;
-    padding-right: 50%
+    padding-right: 2vw;
 }
 
 #workImage2 {
     grid-area: workImage2;
 }
 
+#workImage2 img {
+    width: 300px;
+}
+
 #workInfo2 {
     grid-area: workInfo2;
     padding-left: 2vw;
-    padding-right: 50%
+    padding-right: 2vw;
 }
 
 .myWork h1 {
@@ -163,6 +175,12 @@ h3 {
     font-size: 36px;
 }
 
+.myWork h3 {
+    text-align: center;
+    text-decoration: underline solid 4px;
+    font-size: 24px;
+    font-weight: 500;
+}
 button {
     background-color: #373738;
     font-family: Inconsolata;
